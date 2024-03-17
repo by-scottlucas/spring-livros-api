@@ -1,7 +1,5 @@
 package br.com.spring.mvc.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +12,7 @@ import lombok.Data;
 public class Livro {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column()
@@ -33,6 +31,6 @@ public class Livro {
     private String genero;
 
     @Column()
-    private Date lançamento;
+    private int lancamento;
 
 }
